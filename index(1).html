@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Japan Trip — May 10–17</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1410;
+    --paper: #faf8f3;
+    --card: #ffffff;
+    --muted: #7a7067;
+    --accent: #c94b2a;
+    --accent2: #2e5d4b;
+    --accent3: #1d3557;
+    --gold: #b8860b;
+    --border: rgba(26,20,16,0.1);
+    --shadow: 0 2px 20px rgba(26,20,16,0.07);
+    --r: 12px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 3rem 1.5rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '日本';
+    position: absolute;
+    right: -0.1em;
+    top: -0.15em;
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(120px, 40vw, 200px);
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: clamp(2rem, 8vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+  }
+  .hero-sub {
+    font-size: 14px;
+    color: rgba(250,248,243,0.55);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .hero-pill {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 99px;
+    padding: 5px 14px;
+    font-size: 12px;
+    color: rgba(250,248,243,0.75);
+  }
+
+  /* ── MAIN LAYOUT ── */
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-header {
+    padding: 2rem 0 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-header h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── QUICKSTART BOX ── */
+  .quickstart {
+    background: var(--accent3);
+    color: white;
+    border-radius: var(--r);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0 0;
+  }
+  .quickstart h3 {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 0.75rem;
+  }
+  .quickstart p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+  }
+  .quickstart a { color: #90caf9; text-decoration: none; border-bottom: 1px solid rgba(144,202,249,0.3); }
+
+  /* ── APP GRID ── */
+  .app-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  .app-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: transform 0.15s, box-shadow 0.15s;
+    box-shadow: var(--shadow);
+  }
+  .app-card:active { transform: scale(0.98); }
+  .app-icon {
+    font-size: 24px;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .app-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .app-desc {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.4;
+  }
+  .app-badge {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 2px 8px;
+    border-radius: 99px;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+
+  /* ── TRANSPORT BOX ── */
+  .transport-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 1.25rem;
+    margin-top: 1rem;
+    box-shadow: var(--shadow);
+  }
+  .transport-box h4 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--ink);
+  }
+  .transport-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 13px;
+  }
+  .transport-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 14px;
+  }
+  .t-blue { background: #e3f0fb; }
+  .t-green { background: #e3f5ec; }
+  .t-amber { background: #fef3e0; }
+  .transport-text { color: var(--muted); line-height: 1.5; }
+  .transport-text b { color: var(--ink); font-weight: 500; }
+
+  /* ── DAY CARDS ── */
+  .day-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    margin-bottom: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+
+  .day-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
+  .day-header:active { background: var(--paper); }
+
+  .day-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .day-meta { flex: 1; min-width: 0; }
+  .day-date {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1px;
+  }
+  .day-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+  .day-tagline {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .day-chevron {
+    color: var(--muted);
+    font-size: 11px;
+    transition: transform 0.25s;
+    flex-shrink: 0;
+  }
+  .day-chevron.open { transform: rotate(180deg); }
+
+  .day-body {
+    display: none;
+    border-top: 1px solid var(--border);
+  }
+  .day-body.open { display: block; }
+
+  /* ── ALERT BOX ── */
+  .alert {
+    background: #fef9ec;
+    border-left: 3px solid var(--gold);
+    padding: 0.85rem 1rem 0.85rem 1.25rem;
+    margin: 0;
+    font-size: 13px;
+    color: #5a4500;
+    line-height: 1.6;
+  }
+  .alert b { font-weight: 600; }
+
+  /* ── ACTIVITY BLOCKS ── */
+  .activity {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 14px;
+  }
+  .activity:last-child { border-bottom: none; }
+
+  .activity-time {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    min-width: 52px;
+    padding-top: 2px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .activity-content { flex: 1; min-width: 0; }
+  .activity-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 3px;
+    line-height: 1.35;
+  }
+  .activity-desc {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .activity-desc a {
+    color: var(--accent3);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(29,53,87,0.25);
+    transition: border-color 0.15s;
+  }
+  .activity-desc a:hover { border-color: var(--accent3); }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 99px;
+    border: 1px solid;
+    white-space: nowrap;
+  }
+  .tag-train { background: #e3f0fb; border-color: #b5d4f4; color: #0c447c; }
+  .tag-food { background: #fef3e0; border-color: #fac775; color: #633806; }
+  .tag-walk { background: #e3f5ec; border-color: #9fe1cb; color: #085041; }
+  .tag-culture { background: #eeedfe; border-color: #cecbf6; color: #3c3489; }
+  .tag-night { background: #1a1410; border-color: #444; color: #faf8f3; }
+  .tag-cost { background: #f1efe8; border-color: #d3d1c7; color: #444441; }
+  .tag-tip { background: #faece7; border-color: #f5c4b3; color: #712b13; }
+
+  /* venue link button */
+  .venue-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--accent3);
+    text-decoration: none;
+    background: rgba(29,53,87,0.06);
+    border: 1px solid rgba(29,53,87,0.15);
+    border-radius: 99px;
+    padding: 4px 12px;
+    transition: background 0.15s;
+  }
+  .venue-link:active { background: rgba(29,53,87,0.12); }
+  .venue-link svg { width: 11px; height: 11px; flex-shrink: 0; }
+
+  /* ── MONEY SECTION ── */
+  .money-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  .money-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+  }
+  .money-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+  }
+  .money-amount {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .money-note { font-size: 11px; color: var(--muted); margin-top: 3px; }
+
+  /* ── TIPS ── */
+  .tips-list {
+    list-style: none;
+    margin-top: 1rem;
+  }
+  .tips-list li {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+  .tips-list li:last-child { border-bottom: none; }
+  .tips-list li b { color: var(--ink); font-weight: 500; }
+  .tips-bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    margin-top: 3rem;
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+  .footer-jp {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 28px;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+    opacity: 0.4;
+  }
+  .footer-text {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* ── SENTO SPECIAL ── */
+  .sento-box {
+    background: linear-gradient(135deg, #1a1410 0%, #2e1f1a 100%);
+    color: white;
+    border-radius: var(--r);
+    padding: 1rem 1.25rem;
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+  .sento-box h4 { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #c94b2a; margin-bottom: 0.5rem; }
+  .sento-box p { color: rgba(255,255,255,0.75); }
+
+  /* Day color themes */
+  .day-arrival .day-num { background: #e3f0fb; color: #0c447c; }
+  .day-1 .day-num { background: #faece7; color: #c94b2a; }
+  .day-2 .day-num { background: #eeedfe; color: #3c3489; }
+  .day-3 .day-num { background: #1a1410; color: #faf8f3; }
+  .day-4 .day-num { background: #e3f5ec; color: #2e5d4b; }
+  .day-5 .day-num { background: #1d3557; color: white; }
+  .day-dep .day-num { background: var(--paper); color: var(--muted); border: 1px solid var(--border); }
+
+  @media (max-width: 380px) {
+    .app-grid { grid-template-columns: 1fr; }
+    .money-grid { grid-template-columns: 1fr; }
+    .day-tagline { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-eyebrow">May 10 – 17, 2025</div>
+  <h1>Tokyo<br>& Japan</h1>
+  <p class="hero-sub">3 adults · Ueno base · NH 125 → NH 106</p>
+  <div class="hero-pills">
+    <span class="hero-pill">✈ Haneda arrival ~9 PM</span>
+    <span class="hero-pill">🏠 3分御徒町</span>
+    <span class="hero-pill">🚅 2 day trips</span>
+    <span class="hero-pill">🍣 Eat like a local</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- BEFORE YOU GO -->
+  <div class="section-header">
+    <h2>Before You Fly</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="quickstart">
+    <h3>First things first</h3>
+    <p>Load <strong>Suica</strong> to your iPhone Wallet before landing — or buy a physical Welcome Suica card at Haneda the moment you clear customs. This one card pays for every train, subway, bus, and convenience store all week. Load ¥5,000 (~$35) each to start. <strong>Bring cash</strong> — Japan is still cash-heavy at small restaurants and markets. Withdraw yen from any <strong>7-Eleven ATM</strong> (always accepts foreign cards).</p>
+  </div>
+
+  <!-- APPS -->
+  <div class="section-header" style="padding-top:1.5rem;">
+    <h2>Essential Apps</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="app-grid">
+    <a class="app-card" href="https://apps.apple.com/app/google-maps/id585027354" target="_blank" rel="noopener">
+      <span class="app-icon">🗺️</span>
+      <div class="app-name">Google Maps</div>
+      <div class="app-desc">Download Tokyo offline map before flying. Works without signal.</div>
+      <span class="app-badge">iOS + Android</span>
+    </a>
+    <a class="app-card" href="https://apps.apple.com/app/google-translate/id414706506" target="_blank" rel="noopener">
+      <span class="app-icon">📷</span>
+      <div class="app-name">Google Translate</div>
+      <div class="app-desc">Camera mode reads menus and signs instantly. Game-changer.</div>
+      <span class="app-badge">iOS + Android</span>
+    </a>
+    <a class="app-card" href="https://apps.apple.com/app/navitime-japan-travel/id1273931726" target="_blank" rel="noopener">
+      <span class="app-icon">🚆</span>
+      <div class="app-name">Navitime Japan</div>
+      <div class="app-desc">Best train routing. Shows exact platforms and transfers.</div>
+      <span class="app-badge">iOS + Android</span>
+    </a>
+    <a class="app-card" href="https://tabelog.com/en/" target="_blank" rel="noopener">
+      <span class="app-icon">🍜</span>
+      <div class="app-name">Tabelog</div>
+      <div class="app-desc">Real Japanese restaurant reviews, not tourist-facing ratings.</div>
+      <span class="app-badge">Web + App</span>
+    </a>
+    <a class="app-card" href="https://apps.apple.com/app/suica/id1156875272" target="_blank" rel="noopener">
+      <span class="app-icon">💳</span>
+      <div class="app-name">Suica (iPhone)</div>
+      <div class="app-desc">Add to Apple Wallet before departure. Load ¥5,000 (~$35) each.</div>
+      <span class="app-badge">iPhone only</span>
+    </a>
+    <a class="app-card" href="https://apps.apple.com/app/hyperdia-by-voice/id375581959" target="_blank" rel="noopener">
+      <span class="app-icon">🚅</span>
+      <div class="app-name">Hyperdia</div>
+      <div class="app-desc">Shinkansen schedules and fares. Plan day trips here.</div>
+      <span class="app-badge">iOS + Android</span>
+    </a>
+    <a class="app-card" href="https://apps.apple.com/app/google-lens/id1239505659" target="_blank" rel="noopener">
+      <span class="app-icon">🔍</span>
+      <div class="app-name">Google Lens</div>
+      <div class="app-desc">Scan anything — labels, vending machines, QR codes.</div>
+      <span class="app-badge">iOS + Android</span>
+    </a>
+    <a class="app-card" href="https://apps.apple.com/app/xcurrency/id646062703" target="_blank" rel="noopener">
+      <span class="app-icon">💴</span>
+      <div class="app-name">XE Currency</div>
+      <div class="app-desc">Live JPY rates. Quickly sense what things cost in USD.</div>
+      <span class="app-badge">iOS + Android</span>
+    </a>
+  </div>
+
+  <!-- TRANSPORT -->
+  <div class="section-header" style="padding-top:1.5rem;">
+    <h2>Getting Around</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="transport-box">
+    <h4>Your transport toolkit</h4>
+    <div class="transport-row">
+      <div class="transport-icon t-blue">🚇</div>
+      <div class="transport-text"><b>Tokyo Metro + Toei Subway</b> — Your daily mode. Tap Suica in and out of every gate. Fares ~¥180–280 (~$1.25–1.95) per ride. Runs until ~midnight.</div>
+    </div>
+    <div class="transport-row">
+      <div class="transport-icon t-green">🚅</div>
+      <div class="transport-text"><b>JR Yamanote Line</b> — The green loop that circles Tokyo. Covers Shinjuku, Shibuya, Ueno, Akihabara. Also on Suica.</div>
+    </div>
+    <div class="transport-row">
+      <div class="transport-icon t-amber">🚕</div>
+      <div class="transport-text"><b>Taxi</b> — Safe, metered, and honest. ¥730 (~$5) flag fall then ~¥80/280m. Use for late nights when trains stop. Order via <a href="https://go.goinc.jp/en/" target="_blank">GO app</a>.</div>
+    </div>
+    <div class="transport-row">
+      <div class="transport-icon t-blue">✈</div>
+      <div class="transport-text"><b>Haneda ↔ Hotel</b> — Keikyu Airport Line from T2 toward Asakusa (Toei Asakusa Line), exit Ueno-Okachimachi. ~40 min, ~¥600 (~$4)/person.</div>
+    </div>
+  </div>
+
+  <!-- ITINERARY DAYS -->
+  <div class="section-header" style="padding-top:1.5rem;">
+    <h2>The Itinerary</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <!-- ARRIVAL DAY -->
+  <div class="day-card day-arrival">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num">✈</div>
+      <div class="day-meta">
+        <div class="day-date">Sunday, May 11</div>
+        <div class="day-title">Arrival Day</div>
+        <div class="day-tagline">NH 125 lands ~9 PM · Keikyu to hotel · Konbini dinner</div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="alert"><b>NH 125 arrives Haneda Terminal 2 ~9 PM JST.</b> You'll be through customs by 10 PM. Priority: buy Suica before you do anything else. The vending machine is left of the Tokyo Monorail gate in the arrivals hall.</div>
+
+      <div class="activity">
+        <div class="activity-time">~10 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Get your Suica cards</div>
+          <div class="activity-desc">At the Tokyo Monorail entrance in T2 arrivals, use the Welcome Suica vending machine. Load ¥5,000 (~$35) each. This is your wallet, transit card, and convenience store payment for the whole week. iPhone users: add Suica directly to Apple Wallet at the airport Suica vending machine or in advance via the app.</div>
+          <div class="tags"><span class="tag tag-tip">⚡ Do this first</span></div>
+          <a class="venue-link" href="https://www.jreast.co.jp/en/multi/welcomesuica/welcomesuica.html" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Welcome Suica info
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">~10:30 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Keikyu Airport Line to hotel</div>
+          <div class="activity-desc">From Haneda T2: take the Keikyu Airport Line toward Asakusa (Toei Asakusa Line). Exit at Ueno-Okachimachi or Ueno Station. Short walk to your apartment. ~40 min, ~¥600 (~$4)/person. Tap your Suica. No taxi needed tonight — this line runs until midnight.</div>
+          <div class="tags"><span class="tag tag-train">Keikyu → Toei Asakusa Line</span><span class="tag tag-cost">~¥600 (~$4) pp</span></div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">Late</div>
+        <div class="activity-content">
+          <div class="activity-title">Konbini dinner + crash</div>
+          <div class="activity-desc">Do not try to find a restaurant tonight. Go to the nearest <strong>Lawson</strong> or <strong>7-Eleven</strong> (every corner in Ueno). Japanese convenience store food is genuinely excellent — fresh onigiri, katsu sandwiches, hot ramen, steamed buns. Grab Pocari Sweat to hydrate after the flight. Jet lag will wake you at 4–5 AM — that's actually perfect for tomorrow.</div>
+          <div class="tags"><span class="tag tag-food">¥500–800 (~$3.50–5.50) pp</span><span class="tag tag-tip">Sleep — tomorrow starts at dawn</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 1 -->
+  <div class="day-card day-1">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num">1</div>
+      <div class="day-meta">
+        <div class="day-date">Monday, May 12</div>
+        <div class="day-title">Tokyo: Fish Market + Old Streets</div>
+        <div class="day-tagline">Toyosu at dawn · Yanaka · Ameyoko · Hoppy Street night</div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="alert"><b>Jet lag works in your favor today.</b> You'll be awake at 4–5 AM. Use it — Toyosu opens at 5 AM and is utterly magical at dawn when only market workers are there. The tuna auction runs 5:30–6:30 AM.</div>
+
+      <div class="activity">
+        <div class="activity-time">5:00 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Toyosu Fish Market — tuna auction</div>
+          <div class="activity-desc">From Ueno, take the Hibiya Line to Tsukiji, walk to Shimbashi, then ride the Yurikamome monorail to Shijo-mae Station (right at the market entrance). Enter the Fisheries Wholesale Market Building by 5:30 AM to watch the tuna auction from the observation gallery — massive frozen bluefins sold in a frenzy of hand signals. Free, no lottery needed for the gallery.</div>
+          <div class="tags"><span class="tag tag-train">Hibiya Line + Yurikamome</span><span class="tag tag-cost">Free entry</span></div>
+          <a class="venue-link" href="https://honyaku.j-server.com/LUCSHIJOUA/ns/tl.cgi/https://www.shijou.metro.tokyo.lg.jp/?SLANG=ja&TLANG=en&XMODE=0&XCHARSET=utf-8&XJSID=0" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Toyosu Market official site
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">7:00 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Sushi breakfast — Sushi Dai</div>
+          <div class="activity-desc">Head to Toyosu Gurume (3rd floor, Intermediate Wholesale Building). Go to <strong>Sushi Dai</strong> — expect a line but it moves fast. The 12-piece omakase set is ~¥4,000 (~$28). This is the freshest sushi on earth, made with fish bought at auction 30 minutes earlier. Worth every yen and every minute of the queue.</div>
+          <div class="tags"><span class="tag tag-food">~¥4,000 (~$28) pp</span><span class="tag tag-tip">Arrive before 7:30 or queue gets long</span></div>
+          <a class="venue-link" href="https://www.google.com/maps/search/Sushi+Dai+Toyosu+Market+Tokyo" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Find on Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">9:30 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Tsukiji Outer Market — old market streets</div>
+          <div class="activity-desc">After Toyosu, make your way to Tsukiji (3 km walk across bridges, or quick Yurikamome + walk). The outer market still buzzes: fishmongers, knife shops, tamagoyaki egg-roll stalls, dashi shops. Buy a takeaway sea urchin cup, browse the handmade knife shops. Avoid the tourist shops on the main drag — go one row deeper.</div>
+          <div class="tags"><span class="tag tag-walk">Free to browse</span><span class="tag tag-tip">Bring cash — many stalls cash only</span></div>
+          <a class="venue-link" href="https://www.tsukiji.or.jp/english/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Tsukiji Outer Market
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">11:30 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Yanaka — old Tokyo neighborhood</div>
+          <div class="activity-desc">Ride Metro to Nippori Station. <strong>Yanaka</strong> is Tokyo's best-preserved Shitamachi (old downtown) — narrow lanes, wooden houses, a cemetery locals use as a park. Walk Yanaka Ginza shopping street (50s-era storefronts). Buy taiyaki (fish-shaped sweet cakes). Poke into craft shops. This is where old Tokyo still lives.</div>
+          <div class="tags"><span class="tag tag-walk">Nippori Station exit</span><span class="tag tag-culture">Free</span></div>
+          <a class="venue-link" href="https://www.gotokyo.org/en/spot/44/index.html" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Yanaka — Tokyo Tourism Guide
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">2:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Ameyoko market + afternoon rest</div>
+          <div class="activity-desc">Walk back via <strong>Ameyoko</strong> — the outdoor market running under JR tracks between Ueno and Okachimachi. Dried seafood, cheap produce, Korean food stalls, army surplus. Loud, chaotic, 100% local. Two minutes from your apartment. Then: nap. You've been awake for 30+ hours.</div>
+          <div class="tags"><span class="tag tag-walk">2 min from your apartment</span></div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">7:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Standing sushi near Okachimachi</div>
+          <div class="activity-desc"><strong>Uogashi Nihon-ichi</strong> chain has a branch near Akihabara — nigiri from ¥80 (~$0.55) a piece, super fresh seasonal fish, where office workers eat standing up at a counter. This is not a tourist experience. This is Tuesday evening in Tokyo.</div>
+          <div class="tags"><span class="tag tag-food">~¥1,500 (~$10) pp</span></div>
+          <a class="venue-link" href="https://www.google.com/maps/search/Uogashi+Nihon-ichi+standing+sushi+Tokyo" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Find Uogashi on Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">8:30 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Hoppy Street, Asakusa — local night</div>
+          <div class="activity-desc">One Metro stop to Asakusa. Walk to <strong>Hoppy Street (ホッピー通り)</strong> — a string of old izakayas with plastic outdoor tables, paper lanterns, yakitori smoke, and Hoppy (a local low-alcohol beer substitute that's been a Tokyo staple since 1948). Communal tables, strangers becoming friends. Order: Hoppy, chicken gizzards, grilled leek, edamame. Zero tourists. All local.</div>
+          <div class="tags"><span class="tag tag-night">Asakusa area</span><span class="tag tag-food">¥1,500–2,000 (~$10–14) pp</span></div>
+          <a class="venue-link" href="https://www.google.com/maps/search/Hoppy+Street+Asakusa+Tokyo" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Hoppy Street on Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-card day-2">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num">2</div>
+      <div class="day-meta">
+        <div class="day-date">Tuesday, May 13</div>
+        <div class="day-title">Tokyo: Expat Neighborhoods + Sento</div>
+        <div class="day-tagline">Shimokitazawa · Cat Street · Nakameguro · Ebisu Yokocho · Sento night</div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="activity">
+        <div class="activity-time">9:00 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Shimokitazawa — bohemian Tokyo</div>
+          <div class="activity-desc">Take the Odakyu Line from Shinjuku (or Keio Inokashira from Shibuya) to <strong>Shimokitazawa</strong>. This is where young Tokyoites actually live: vintage clothing shops, tiny independent cafes, live music venues, zero chain stores, zero tourists. Wander without a plan. Stop at <strong>Bear Pond Espresso</strong> for coffee (tiny, serious, third-wave). Browse a vintage shop like Flamingo. Just observe the city being itself.</div>
+          <div class="tags"><span class="tag tag-train">Odakyu Line ~20 min from Shinjuku</span><span class="tag tag-walk">Browse free</span></div>
+          <a class="venue-link" href="https://www.timeout.com/tokyo/things-to-do/shimokitazawa-guide" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Shimokitazawa guide (Time Out)
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">12:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Lunch: local ramen or curry</div>
+          <div class="activity-desc">In Shimokitazawa, find a ramen shop on a back street — look for a handwritten sign and a queue of 3–5 people. That's always the right choice. Or find a small Japanese curry shop where the lunch set is ¥850 (~$6) and a salaryman is eating alone at the counter next to you. This is what everyday Tokyo tastes like.</div>
+          <div class="tags"><span class="tag tag-food">¥800–1,200 (~$5.50–8.25) pp</span></div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">2:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Cat Street, Harajuku — the anti-tourist shopping street</div>
+          <div class="activity-desc">Ride the Odakyu or Keio Line to <strong>Harajuku Station</strong>, then walk 5 minutes to <strong>Cat Street (キャットストリート)</strong> — an informal pedestrian lane running parallel to the flashy Omotesando boulevard, but completely different in character. No luxury brands here. Instead: independent vintage shops, tiny select boutiques, concept stores, street food carts, and cafés you won't find anywhere else. The street has a relaxed, unhurried energy that's rare for central Tokyo. Browse <strong>Beams</strong> or <strong>United Arrows</strong> side alleys, duck into a vintage shop, pick up a coffee. This is the side of Harajuku that fashion-forward Tokyo actually inhabits — not the Takeshita Street costume chaos.</div>
+          <div class="tags"><span class="tag tag-walk">5 min from Harajuku Station</span><span class="tag tag-culture">Free to browse</span></div>
+          <a class="venue-link" href="https://www.google.com/maps/search/Cat+Street+Harajuku+Tokyo+%E3%82%AD%E3%83%A3%E3%83%83%E3%83%88%E3%82%B9%E3%83%88%E3%83%AA%E3%83%BC%E3%83%88" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Cat Street on Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">4:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Nakameguro canal walk</div>
+          <div class="activity-desc">Ride to <strong>Nakameguro Station</strong> (Tokyu Toyoko Line from Shibuya, one stop). Walk along the Meguro River canal — lined with cherry trees (lush green in May), independent cafes, fashion boutiques, tiny bars. This is the neighborhood of Tokyo that expats and fashionable locals love. Cross under the low bridges, stop at a canal-side café. Continue toward Daikanyama — check out the <strong>Daikanyama T-Site</strong> bookstore complex for a glimpse of refined Japanese taste.</div>
+          <div class="tags"><span class="tag tag-walk">Tokyu Toyoko Line from Shibuya</span><span class="tag tag-culture">Free</span></div>
+          <a class="venue-link" href="https://store.tsite.jp/daikanyama/english/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Daikanyama T-Site (English)
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">6:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Ebisu Yokocho — hidden izakaya alley</div>
+          <div class="activity-desc">Walk to <strong>Ebisu Station</strong>. Ebisu Yokocho is a narrow covered alley hidden just behind the station, packed with tiny izakayas — each fits 8 people, communal seating, yakitori, sake, beer. Where local Tokyoites eat on a Tuesday night. Loud, friendly, completely authentic. Order from the handwritten menu or point at what your neighbor is eating.</div>
+          <div class="tags"><span class="tag tag-night">2 min from Ebisu Station</span><span class="tag tag-food">¥2,500–3,500 (~$17–24) pp</span></div>
+          <a class="venue-link" href="https://www.google.com/maps/search/Ebisu+Yokocho+Tokyo" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Ebisu Yokocho on Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">9:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Kotobukiyu Sento — public bath</div>
+          <div class="activity-desc"><strong>Kotobukiyu</strong> in Higashi-Ueno is one of Tokyo's best neighborhood public baths and part of the official Welcome Sento campaign — multilingual signs, tattoo-friendly, 2 minutes from your apartment. Entry ¥550 (~$3.80). Rent a small towel (¥100 (~$0.70)). Multiple baths: hot soaking pool, herb bath, outdoor bath, sauna, cold plunge. Stay 1–2 hours. Afterward buy a cold glass bottle of milk from the vending machine — the classic sento finish.</div>
+          <div class="tags"><span class="tag tag-culture">¥550 (~$3.80) entry</span><span class="tag tag-tip">No swimwear · Wash thoroughly before the tub</span></div>
+          <div class="sento-box">
+            <h4>Sento etiquette — read this</h4>
+            <p>Undress fully in the changing room, store clothes in the basket or locker. Take a small towel and washbasin, find a shower stall, wash every inch of yourself before entering the shared tub. Keep your towel folded on your head or beside the bath — never in the water. Speak quietly. Don't stare. Enjoy.</p>
+          </div>
+          <a class="venue-link" href="https://welcome-sento.com/en/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Welcome Sento (English)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-card day-3">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num">3</div>
+      <div class="day-meta">
+        <div class="day-date">Wednesday, May 14</div>
+        <div class="day-title">Kyoto Day Trip</div>
+        <div class="day-tagline">Shinkansen at dawn · Fushimi Inari early · Nishiki · Gion backstreets</div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="alert"><b>Rule for Kyoto in one day:</b> go early, skip the famous spots until you've done the quiet ones, book return Shinkansen before you leave Tokyo. Get seat E on the right side to see Mt. Fuji about 40 minutes after departure.</div>
+
+      <div class="activity">
+        <div class="activity-time">6:30 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Shinkansen from Tokyo Station</div>
+          <div class="activity-desc">From Ueno, take the JR Yamanote Line to Tokyo Station (10 min). Board the <strong>Nozomi Shinkansen</strong> to Kyoto — first trains ~6 AM, arrives Kyoto ~8:30 AM. Buy a bento box at the Tokyo Station food halls before boarding — eating a bento on a bullet train is a genuine ritual. One way: ~¥13,320 (~$92) per person. <strong>Buy round-trip tickets at the JR office</strong> before you go.</div>
+          <div class="tags"><span class="tag tag-train">Nozomi ~2h 20m</span><span class="tag tag-cost">¥13,320 (~$92) pp one way</span></div>
+          <a class="venue-link" href="https://www.jreast.co.jp/e/ticket/reservation.html" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            JR East — Reserve Shinkansen
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">9:00 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Fushimi Inari — before the crowds</div>
+          <div class="activity-desc">JR Nara Line from Kyoto Station to Inari Station (5 min, ¥150 (~$1.05)). At 9 AM you're mostly with serious hikers and locals at morning prayer. Walk the lower torii gates then <strong>hike past the first two stations</strong> — this is where nearly everyone turns back, and where the trail becomes a quiet mountain path with mossy stone foxes. Come back down by 10:30 AM.</div>
+          <div class="tags"><span class="tag tag-walk">JR Nara Line 5 min</span><span class="tag tag-cost">Free</span><span class="tag tag-tip">Wear walking shoes</span></div>
+          <a class="venue-link" href="https://inari.jp/en/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Fushimi Inari official (English)
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">11:00 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Nishiki Market — Kyoto's Kitchen</div>
+          <div class="activity-desc">Subway to Karasuma-Oike, walk to <strong>Nishiki Market</strong> — a 400-year-old covered market street. Not tourist-free, but the vendors are the real thing: pickled vegetables, fresh yuba (tofu skin), grilled skewers, handmade mochi, dashi shops. Eat as you walk. Buy some pickles to take back. This is where Kyoto grandmothers shop.</div>
+          <div class="tags"><span class="tag tag-food">Grazing ¥1,000–1,500 (~$7–10)</span><span class="tag tag-culture">Free entry</span></div>
+          <a class="venue-link" href="https://www.kyoto-nishiki.or.jp/languages/en/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Nishiki Market (English)
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">12:30 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Lunch: teishoku set meal</div>
+          <div class="activity-desc">Near Nishiki, find a small restaurant with a teishoku lunch set (grilled fish or tofu, miso soup, rice, pickles) for ¥900–1,200 (~$6.20–8.30). Look for a place with a plastic food display case in the window and a sliding wooden door. Kyoto cuisine is lighter and more subtle than Tokyo's.</div>
+          <div class="tags"><span class="tag tag-food">¥900–1,200 (~$6.20–8.30) pp</span></div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">2:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Gion backstreets — the real ones</div>
+          <div class="activity-desc">Skip the main Hanamikoji Street (wall-to-wall tourists). Walk east toward <strong>Shirakawa Canal</strong> — a narrow waterway lined with old machiya townhouses, stone lanterns, and willow trees. Almost nobody is there. Continue to <strong>Shimbashi Street</strong> nearby. This is the Kyoto that most visitors never find. Walk quietly — geiko and maiko still use these streets in the afternoon.</div>
+          <div class="tags"><span class="tag tag-walk">Free</span><span class="tag tag-tip">Quiet hours 2–4 PM best</span></div>
+          <a class="venue-link" href="https://kyoto.travel/en/neighbourhood/14" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Gion — Kyoto Tourism (English)
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">5:30 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Shinkansen back to Tokyo</div>
+          <div class="activity-desc">Board the Nozomi back from Kyoto Station, arriving Tokyo ~7:50 PM. Total day cost per person including transport: ~¥30,000 (~$207). Dinner back in Ueno — try a bowl of tonkotsu ramen at <strong>Ichiran</strong> near Ueno: order at a vending machine, eat alone in a wooden booth, deeply satisfying.</div>
+          <div class="tags"><span class="tag tag-train">Reserve return seat in advance</span><span class="tag tag-food">Ramen ¥1,000–1,200 (~$7–8.30)</span></div>
+          <a class="venue-link" href="https://en.ichiran.com/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Ichiran Ramen
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 4 -->
+  <div class="day-card day-4">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num">4</div>
+      <div class="day-meta">
+        <div class="day-date">Thursday, May 15</div>
+        <div class="day-title">Nikko E-Bike Day Trip</div>
+        <div class="day-tagline">Mountain shrines · E-bike hire · Forest trails · Jizo statues</div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="alert"><b>Why Nikko?</b> Mountainous, forested, culturally dense, and far less visited than Kyoto. The e-bike rental is a genuine adventure — you can reach hidden spots no tour bus goes to. One of the most memorable days you can have near Tokyo.</div>
+
+      <div class="activity">
+        <div class="activity-time">7:00 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Tobu Limited Express to Nikko</div>
+          <div class="activity-desc">From Asakusa Station: <strong>Tobu Limited Express "Revaty Kegon"</strong> directly to Tobu-Nikko Station. ~2 hours, ~¥2,720 (~$19) per person (reserved seats, book in advance at the Tobu ticket office or online). Arrive Nikko ~9:30 AM. This train is comfortable and scenic through the Kanto plains into the mountains.</div>
+          <div class="tags"><span class="tag tag-train">Tobu Asakusa → Tobu-Nikko ~2h</span><span class="tag tag-cost">~¥2,720 (~$19) pp</span></div>
+          <a class="venue-link" href="https://www.tobu.co.jp/foreign/en/nikko/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Tobu Nikko Line (English)
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">9:30 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Pick up e-bikes — Nikko Bike</div>
+          <div class="activity-desc"><strong>Nikko Bike</strong> is a 5-minute walk from Tobu-Nikko Station. No reservation — first come, first served. Day rental ¥2,500 (~$17) per bike, helmet included, ¥7,500 (~$52) for three. The electric assist makes every uphill section completely effortless. They'll give you a map with route suggestions. The terrain here is hilly and beautiful.</div>
+          <div class="tags"><span class="tag tag-walk">5 min walk from station</span><span class="tag tag-cost">¥2,500 (~$17) pp for the day</span></div>
+          <a class="venue-link" href="https://www.tripadvisor.com/Attraction_Review-g298182-d14067913-Reviews-Nikko_Bike-Nikko_Tochigi_Prefecture_Kanto.html" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Nikko Bike — TripAdvisor reviews
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">10:00 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Ride to Kanmangafuchi Abyss</div>
+          <div class="activity-desc">Skip the main shrine first. Ride north to <strong>Kanmangafuchi Abyss</strong> — a riverside gorge with a row of 70+ moss-covered Jizo statues lining the path alongside rushing water. Eerily quiet, beautiful, and almost never crowded. Lock bikes at the entrance, walk the stone path for 20 minutes. One of the strangest and most moving places near Tokyo.</div>
+          <div class="tags"><span class="tag tag-walk">~2 km ride from rental shop</span><span class="tag tag-cost">Free</span></div>
+          <a class="venue-link" href="https://www.nikko-jp.org/english/kanmangafuchi/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Kanmangafuchi Abyss (English)
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">11:00 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Nikko Toshogu Shrine complex</div>
+          <div class="activity-desc">Ride up to the World Heritage shrine complex. Lock bikes and walk the cedar-lined avenue. The ¥1,300 (~$9) combined ticket covers Toshogu Shrine and surrounding temples. The gold-lacquered shrines are genuinely spectacular — more ornate than anything you'll see elsewhere in Japan. Take the path behind the Nemuri-Neko (Sleeping Cat) carving up 207 stone steps to Tokugawa Ieyasu's forested tomb.</div>
+          <div class="tags"><span class="tag tag-culture">¥1,300 (~$9) entry</span></div>
+          <a class="venue-link" href="https://www.nikko-toshogu.jp/english/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Nikko Toshogu Shrine (English)
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">1:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Lunch: yuba and river fish</div>
+          <div class="activity-desc">Nikko is famous for <strong>yuba</strong> (tofu skin pulled fresh from heated soymilk) and freshwater <strong>iwana fish</strong> grilled on skewers. Find a small restaurant near the shrine — look for a yuba teishoku lunch set for ¥1,200–1,800 (~$8.30–12.40). Skip any restaurant with an English menu on the door; go one street further.</div>
+          <div class="tags"><span class="tag tag-food">¥1,200–1,800 (~$8.30–12.40) pp</span></div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">2:30 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Forest trail ride + return</div>
+          <div class="activity-desc">Ride further into the cedar forest toward <strong>Takino-o Shrine</strong> — a small waterfall shrine on a trail through ancient trees that almost no one visits. The e-bikes handle the incline easily. Return to the rental shop by 4:30 PM to catch the 5 PM Tobu express back to Tokyo.</div>
+          <div class="tags"><span class="tag tag-walk">Forest trail</span><span class="tag tag-cost">Free</span></div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">5:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Return to Tokyo + tonkatsu dinner</div>
+          <div class="activity-desc">Tobu Express back to Asakusa, arrive ~7 PM. Dinner: find a small tonkatsu (breaded pork cutlet) shop near Ueno or Okachimachi. Any standing tonkatsu counter with a handwritten daily set menu is excellent. Meal with rice, miso soup, shredded cabbage: ¥1,200 (~$8.30).</div>
+          <div class="tags"><span class="tag tag-food">¥1,200 (~$8.30) pp</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 5 -->
+  <div class="day-card day-5">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num">5</div>
+      <div class="day-meta">
+        <div class="day-date">Friday, May 16</div>
+        <div class="day-title">Tokyo at Night</div>
+        <div class="day-tagline">Nezu shrine · Shinjuku · Golden Gai · Shibuya at midnight</div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="alert"><b>Your last full night.</b> Start slow, end late. Tokyo's nightlife rewards patience — the best bars are up unmarked staircases in anonymous buildings. The city is completely safe to wander at 2 AM. Last trains are ~midnight; taxi home after or stay until the 5 AM first trains.</div>
+
+      <div class="activity">
+        <div class="activity-time">10:00 AM</div>
+        <div class="activity-content">
+          <div class="activity-title">Nezu Shrine + kissaten coffee</div>
+          <div class="activity-desc"><strong>Nezu Shrine</strong> is a 15-minute walk from your apartment — a vermillion torii tunnel like Fushimi Inari but in Tokyo, almost entirely unknown to tourists. The azalea mountain garden behind the main hall is in peak bloom in May. Afterward, find a local <strong>kissaten</strong> (old-school Japanese coffee shop) near Yushima for a thick cotton drip coffee and morning toast set (buttered toast, boiled egg, coffee ¥700 (~$4.85)). A dying art form. Cherish it.</div>
+          <div class="tags"><span class="tag tag-walk">15 min walk from hotel</span><span class="tag tag-cost">Shrine free · Coffee ¥700 (~$4.85)</span></div>
+          <a class="venue-link" href="https://www.nedujinja.or.jp/english/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Nezu Shrine official (English)
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">1:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Akihabara — electric town walk</div>
+          <div class="activity-desc">One subway stop to <strong>Akihabara</strong>. Even if you're not into anime, the raw density of it — multi-floor electronics stores, capsule machines, tiny component shops, maid cafe flyers being handed out — is a genuine Tokyo experience that exists nowhere else. Walk through the back streets, not the main drag. Grab a standing ramen bowl.</div>
+          <div class="tags"><span class="tag tag-walk">1 stop from Okachimachi</span></div>
+          <a class="venue-link" href="https://www.gotokyo.org/en/spot/47/index.html" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Akihabara — Tokyo Tourism Guide
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">4:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Omoide Yokocho — Memory Lane, Shinjuku</div>
+          <div class="activity-desc">Yamanote Line to Shinjuku, west exit. <strong>Omoide Yokocho</strong> (Memory Lane) is a narrow 50-meter alley of tiny yakitori stalls where smoke fills the air and salarywomen and men drink under the Chuo train tracks. Very known but still genuinely atmospheric at 5 PM. Beer and skewers, standing or perched on a stool, while trains rumble overhead.</div>
+          <div class="tags"><span class="tag tag-food">¥1,500–2,000 (~$10–14) pp</span><span class="tag tag-night">Shinjuku west exit</span></div>
+          <a class="venue-link" href="https://www.timeout.com/tokyo/restaurants/omoide-yokocho" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Omoide Yokocho — Time Out guide
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">7:00 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Golden Gai — the best bar neighborhood on earth</div>
+          <div class="activity-desc"><strong>Golden Gai</strong>: six narrow alleys, ~200 bars, each the size of a large closet — fitting 6 to 8 people maximum. Every bar has a theme: film noir, horror movie posters, jazz records, mountaineering gear, kabuki. Some say "no foreigners" but most welcome you if you bow and ask politely. Find one with a vibe you love. Order what the bartender recommends. Cover charge ¥500–1,000 (~$3.45–6.90). Drinks ¥800 (~$5.50). Stay for two bars.</div>
+          <div class="tags"><span class="tag tag-night">Shinjuku east side</span><span class="tag tag-cost">Cover ¥500–1,000 (~$3.45–6.90) + drinks</span><span class="tag tag-tip">Ask permission to enter</span></div>
+          <a class="venue-link" href="https://www.timeout.com/tokyo/bars-and-pubs/golden-gai" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            Golden Gai — Time Out guide
+          </a>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">10:30 PM</div>
+        <div class="activity-content">
+          <div class="activity-title">Shibuya crossing at midnight</div>
+          <div class="activity-desc">Yamanote Line to Shibuya. On a Friday night, Shibuya is loud, alive, astonishing. Cross the scramble intersection with everyone else — it genuinely feels like the world is moving simultaneously. Then walk 3 blocks southwest to <strong>Udagawacho</strong> — independent bars, izakayas, small clubs, no tourists. Find a bar and stay as long as you want. Taxi home ¥1,500–2,000 (~$10–14). Or wait for the 5 AM first trains and watch the city wake up.</div>
+          <div class="tags"><span class="tag tag-night">Last trains ~midnight</span><span class="tag tag-cost">Taxi home ¥1,500–2,000 (~$10–14)</span></div>
+          <a class="venue-link" href="https://go.goinc.jp/en/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 6h10M7 2l4 4-4 4"/></svg>
+            GO Taxi app
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEPARTURE -->
+  <div class="day-card day-dep">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num">✈</div>
+      <div class="day-meta">
+        <div class="day-date">Saturday, May 17</div>
+        <div class="day-title">Departure — NH 106</div>
+        <div class="day-tagline">Final soba · Keikyu to Haneda · Omiyage at airport</div>
+      </div>
+      <span class="day-chevron">▾</span>
+    </div>
+    <div class="day-body">
+      <div class="activity">
+        <div class="activity-time">Morning</div>
+        <div class="activity-content">
+          <div class="activity-title">Final meal: zaru soba</div>
+          <div class="activity-desc">Before leaving, find a soba restaurant near Okachimachi for a bowl of <strong>zaru soba</strong> — cold buckwheat noodles with dipping sauce. Simple, austere, perfect. A Japanese farewell meal. Look for a small place with a bamboo curtain noren at the door.</div>
+          <div class="tags"><span class="tag tag-food">¥800–1,200 (~$5.50–8.25) pp</span></div>
+        </div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-time">Allow 3h</div>
+        <div class="activity-content">
+          <div class="activity-title">Keikyu Line to Haneda + omiyage</div>
+          <div class="activity-desc">Same route as arrival, reversed: Keikyu Airport Line from Ueno area to Haneda T2. ~40 min, ~¥600 (~$4). Get there 2.5–3 hours before departure. Buy <strong>omiyage</strong> (gifts) at the terminal shops — Japanese airports have exceptional last-minute gift options: matcha Kit Kats, Tokyo Banana cakes, premium sake, pickles. Use any remaining Suica balance at the terminal convenience store.</div>
+          <div class="tags"><span class="tag tag-train">Keikyu Line ~40 min</span><span class="tag tag-cost">~¥600 (~$4) pp</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUDGET -->
+  <div class="section-header">
+    <h2>Budget Guide</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="money-grid">
+    <div class="money-card">
+      <div class="money-label">Daily Tokyo</div>
+      <div class="money-amount">¥15–20k<br><span style="font-size:14px;font-weight:400;color:var(--muted)">~$103–138</span></div>
+      <div class="money-note">Per person · food, transport, activities</div>
+    </div>
+    <div class="money-card">
+      <div class="money-label">Kyoto Day</div>
+      <div class="money-amount">¥30k<br><span style="font-size:14px;font-weight:400;color:var(--muted)">~$207</span></div>
+      <div class="money-note">Per person incl. round-trip Shinkansen</div>
+    </div>
+    <div class="money-card">
+      <div class="money-label">Nikko Day</div>
+      <div class="money-amount">¥10k<br><span style="font-size:14px;font-weight:400;color:var(--muted)">~$69</span></div>
+      <div class="money-note">Per person · Tobu train + e-bike + entry</div>
+    </div>
+    <div class="money-card">
+      <div class="money-label">ATM to use</div>
+      <div class="money-amount">7-Eleven</div>
+      <div class="money-note">Always accepts foreign cards. Japan Post ATM also works.</div>
+    </div>
+  </div>
+
+  <!-- SURVIVAL TIPS -->
+  <div class="section-header">
+    <h2>Local Rules</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <ul class="tips-list">
+    <li>
+      <div class="tips-bullet">1</div>
+      <span><b>Don't tip.</b> Ever. Anywhere. Tipping is considered rude in Japan — it implies the server doesn't earn enough or that you feel superior. Just say <em>gochisousama deshita</em> when you leave (thank you for the meal).</span>
+    </li>
+    <li>
+      <div class="tips-bullet">2</div>
+      <span><b>Eat while walking is frowned upon</b> in most places, except at street stalls where it's expected. If you buy something from a stall, eat it right there.</span>
+    </li>
+    <li>
+      <div class="tips-bullet">3</div>
+      <span><b>On the subway:</b> be quiet, no phone calls, give up your seat. Nobody talks. Stand on the left of escalators (Tokyo convention) so walkers can pass on the right.</span>
+    </li>
+    <li>
+      <div class="tips-bullet">4</div>
+      <span><b>Cash is king</b> at small restaurants, market stalls, and shrines. Always carry ¥5,000–10,000 (~$35–69) on you. Convenience stores and most chain restaurants take cards and Suica.</span>
+    </li>
+    <li>
+      <div class="tips-bullet">5</div>
+      <span><b>Standing at the counter</b> at a sushi bar, ramen counter, or tonkatsu joint is completely normal and often results in better food. Don't wait for a table if there are counter seats.</span>
+    </li>
+    <li>
+      <div class="tips-bullet">6</div>
+      <span><b>The combini is your friend.</b> Lawson, 7-Eleven, and Family Mart sell genuinely good food, cheap hot coffee, and anything you forgot to pack. The onigiri here is better than sandwiches at most airports anywhere in the world.</span>
+    </li>
+    <li>
+      <div class="tips-bullet">7</div>
+      <span><b>At restaurants</b> with no English menu: point confidently at what looks good, say <em>kore</em> (this one), hold up fingers for quantity. Smiling and genuine curiosity go a long way. Most chefs are quietly delighted a foreigner is eating their food.</span>
+    </li>
+  </ul>
+
+  <footer>
+    <div class="footer-jp">旅</div>
+    <div class="footer-text">Have a wonderful trip. Be curious, be quiet, eat everything.</div>
+  </footer>
+
+</div>
+
+<script>
+function toggle(header) {
+  const body = header.nextElementSibling;
+  const chevron = header.querySelector('.day-chevron');
+  const isOpen = body.classList.contains('open');
+  document.querySelectorAll('.day-body.open').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.day-chevron.open').forEach(c => c.classList.remove('open'));
+  if (!isOpen) {
+    body.classList.add('open');
+    chevron.classList.add('open');
+    setTimeout(() => header.scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+  }
+}
+
+// Open arrival day by default
+document.addEventListener('DOMContentLoaded', () => {
+  const first = document.querySelector('.day-header');
+  if (first) toggle(first);
+});
+</script>
+</body>
+</html>
